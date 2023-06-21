@@ -40,7 +40,11 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 3rem;
-  padding: 2rem;
-  gap: 1.5rem;
+  margin: 2rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=Layout.css.map */

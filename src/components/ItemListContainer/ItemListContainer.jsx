@@ -9,7 +9,7 @@ const ItemListContainer = () => {
   const [info, setInfo] = useState([]);
 
   useEffect(() => {
-    axios('./data.json').then((json) =>
+    axios(`https://fakestoreapi.com/products`).then((json) =>
       setInfo(json.data)
     );
   }, []);

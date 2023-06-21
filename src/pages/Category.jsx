@@ -1,36 +1,41 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import Card from '../components/Card/Card';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
+import Card from "../components/Card/Card";
 
 const Category = () => {
   const [info, setInfo] = useState([]);
 
   let { categoryId } = useParams();
 
-  let filteredProducts = info.filter((data) => {
-    return data.categoria.id === categoryId;
+  console.log("categoryId", categoryId);
+  console.log("info", info);
+
+  let filteredProducts = info.filter((info) => {
+    return info.category=== categoryId;
   });
 
+  console.log("filteredProducts", filteredProducts);
+
   useEffect(() => {
-    axios("../data.json").then((json) =>
-    setInfo(json.data)
+    axios(`https://fakestoreapi.com/products`).then((json) =>
+      setInfo(json.data)
     );
   }, []);
 
   return (
     <>
-    {filteredProducts.map((info) => {
-      return (
-        <div className="link" key={info.id}>
-          <Link to="/">
+      {filteredProducts.map((info) => {
+        return (
+          <div key={info.id}>
+            <Link to={`/detail/${info.id}`}>
             <Card info={info} />
-          </Link>
-        </div>
-      );
-    })}
+            </Link> 
+          </div>
+        );
+      })}
     </>
   );
 };
 
-export default Category
+export default Category;

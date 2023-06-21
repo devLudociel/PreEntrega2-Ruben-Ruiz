@@ -1,17 +1,21 @@
 import React from 'react'
-import { useRouteError, Link} from "react-router-dom";
+import { useRouteError, Link } from "react-router-dom";
+import './Error.css'
 
 const ErrorNotFound = () => {
-    const error = useRouteError();
-    console.log(error)
- 
- 
-    return (
-        <div>
-        <h1>404</h1>
-        <p>Page not found</p>
-        <p>{error.statusText || error.message}</p>
-        <Link to="/">Volver al Inicio</Link>
+  const error = useRouteError();
+
+  return (
+    <div className='containerError'>
+      <div>
+        <img src="../../src/assets/img/error404.png" alt="Error 404" />
+      </div>
+      <div className='msjError'>
+        <p>CREO QUE TE HAS PERDIDO, ESTA NO ES LA RUTA QUE DESEAS</p>
+        <Link className="btnError" to="/">
+          <span>Volver al Inicio</span>
+        </Link>
+      </div>
     </div>
   )
 }

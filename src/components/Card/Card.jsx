@@ -1,18 +1,20 @@
+
 import React from 'react'
 
 const Card = ({info}) => {
-  const {titulo, precio, imagen } = info
-  
+  const {price, image, title } = info
+
+
   return (
     <>
         <div className="card">
         <div className="imge">
           <div className="Usericon"></div>
-          <p className="title">{titulo}</p>
-          <p className="price">{`${precio}$`}</p>
+          <p className="title">{title}</p>
+          <p className="price">{`${price}$`}</p>
         </div>
 
-        <img src={imagen} alt="img" className='Description'/>
+        <img src={image} alt="img" className='img'/>
         <button className='btnCard'>Comprar</button>
       </div>
     </>

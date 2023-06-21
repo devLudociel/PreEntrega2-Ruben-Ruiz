@@ -15,27 +15,19 @@ const NavBar = () => {
 
             <ul className="items">
                 <li className="item">
-                    <Link to="/category/base">Bases</Link>
+                    <Link to="/category/men's clothing">men's clothing</Link>
                 </li>
 
                 <li className="item">
-                <Link to="/category/polvo">Compactos</Link>
+                <Link to="/category/electronics">electronics</Link>
                 </li>
 
                 <li className="item">
-                <Link to="/category/high">Iluminadores</Link>
+                <Link to="/category/jewelery">jewelery</Link>
                 </li>
 
                 <li className="item">
-                <Link to="/category/labial">Labiales</Link>
-                </li>
-
-                <li className="item">
-                <Link to="/category/rubor">Rubor</Link>
-                </li>
-
-                <li className="item">
-                <Link to="/category/surtido">Surtidos</Link>
+                <Link to="/category/women's clothing">women's clothing</Link>
                 </li>
             </ul>
 
